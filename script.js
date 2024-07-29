@@ -1,7 +1,10 @@
 const counter = document.getElementById("counter");
 const board = document.getElementById("board");
+const countingTime = document.getElementById("timer");
 
 let score = 0;
+let timeLeft = 120;
+
 
 //click thingies//
 class Clickie {
@@ -14,8 +17,22 @@ class Clickie {
 
         this.domElm.addEventListener('click', () => {
             this.domElm.remove();
+            timeLeft--;
             score++;
             counter.innerHTML = score;
+            setInterval(function () {
+                this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
+                this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
+                this.createDomElm();
+            }, 1000)
+
+            setInterval(function () {
+                countingTime.innerHTML = timeLeft--;
+                
+            if (timeLeft === 0) {
+                location.href = "gameover.html";
+            }
+            }, 100);
         });
     }
 
@@ -33,19 +50,3 @@ class Clickie {
 }
 
 const clickie = new Clickie();
-
-let timer = 0;
-
-function appearDisappear() {
-    setInterval(function () {
-        timer++;
-        if (timer % 2 !== 0) {
-            this.domElm.style.display = "block";
-        }
-        else {
-            this.domElm.style.display = "none";
-        }
-    }, 1000)
-
-    appearDisappear();
-}
