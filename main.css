@@ -21,4 +21,5 @@
   .clickies {
       background-color: rgb(240, 32, 32);
       position: absolute;
+      display: block;
   }

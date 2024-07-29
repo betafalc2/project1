@@ -1,23 +1,18 @@
-mvp - have a player at the middle, enemy that approach player from a random side and touches the player avoids it
+click on the things that appear on the screen, counting score
 
-(basically space invaders but from the middle)
+mvp - make one thing that is clicked and counts+
 
-m1 - player with shooting ability  via click
+m1 - create a counter 
+create an object to click on
 
-.set the player in the middle
-.figure out shooting when click
+m2 - count clicked things
+click and disappear
 
-m2 - enemies that approach player from all sides and shoot at the player
+m3 - thing appears, click and thing disappears
+score + if thing is clicked.
 
-.set enemies coming from all sides
-.shooting at player
-
-m3 - collision and game over
-.set collision of bullets and enemies
-.set game over
-.set restart
+bonus - making it touch screen also
 
 
-bonus - 
-.enable touchscreen (as an alternative to click)
-.aesthetics
+https://github.com/betafalc2/project1.git
+
