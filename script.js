@@ -1,9 +1,23 @@
 const counter = document.getElementById("counter");
 const board = document.getElementById("board");
 const countingTime = document.getElementById("timer");
+const start = document.getElementById("start");
 
 let score = 0;
 let timeLeft = 120;
+
+start.addEventListener('click', ()=>{
+setInterval(() => {
+    countingTime.innerHTML = timeLeft--;
+
+    if (timeLeft === 0) {
+        location.href = "gameover.html";
+    }
+}, 100);
+
+start.style.display = "none";
+});
+
 
 
 //click thingies//
@@ -42,11 +56,3 @@ class Clickie {
 }
 
 const clickie = new Clickie();
-
-setInterval(() => {
-    countingTime.innerHTML = timeLeft--;
-
-    if (timeLeft === 0) {
-        location.href = "gameover.html";
-    }
-}, 100);
