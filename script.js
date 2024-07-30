@@ -16,23 +16,14 @@ class Clickie {
         this.createDomElm();
 
         this.domElm.addEventListener('click', () => {
-            this.domElm.remove();
-            timeLeft--;
             score++;
             counter.innerHTML = score;
-            setInterval(function () {
-                this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
-                this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
-                this.createDomElm();
-            }, 1000)
 
-            setInterval(function () {
-                countingTime.innerHTML = timeLeft--;
-                
-            if (timeLeft === 0) {
-                location.href = "gameover.html";
-            }
-            }, 100);
+            this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
+            this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
+
+            this.domElm.style.left = this.positionX + "vw";
+            this.domElm.style.bottom = this.positionY + "vh";
         });
     }
 
@@ -47,6 +38,15 @@ class Clickie {
         
         board.appendChild(this.domElm);
     }
+    
 }
 
 const clickie = new Clickie();
+
+setInterval(() => {
+    countingTime.innerHTML = timeLeft--;
+
+    if (timeLeft === 0) {
+        location.href = "gameover.html";
+    }
+}, 100);
