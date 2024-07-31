@@ -12,6 +12,7 @@ let timeLeft = 60;
 //timer//
 start.addEventListener('click', () => {
     new Clickie();
+
     setInterval(() => {
         countingTime.innerHTML = timeLeft--;
 
@@ -19,7 +20,11 @@ start.addEventListener('click', () => {
             localStorage.setItem("counter", score);
             location.href = "./gameover.html";
         }
-    }, 100);
+    }, 500);
+
+    setTimeout(() => {
+        new Bomb();
+    }, 600);
 
     start.style.display = "none";
 });
@@ -64,4 +69,46 @@ class Clickie {
 
     }
 
+}
+
+class Bomb {
+    constructor() {
+        this.width = 5;
+        this.height = 10;
+        this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
+        this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
+        this.createDomElm();
+        this.clickBomb();
+        this.moveBomb();
+    }
+
+    createDomElm() {
+        this.domElm = document.createElement("div");
+
+        this.domElm.className = "bomb";
+        this.domElm.style.width = this.width + "vw";
+        this.domElm.style.height = this.height + "vh";
+        this.domElm.style.left = this.positionX + "vw";
+        this.domElm.style.bottom = this.positionY + "vh";
+
+        board.appendChild(this.domElm);
+    }
+
+    clickBomb() { //update score and move to random position//
+        this.domElm.addEventListener('click', () => {
+            localStorage.setItem("counter", score);
+            location.href = "./gameover.html";
+
+        })
+    }
+    moveBomb() {
+        setInterval(() => {
+            this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
+            this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
+
+            this.domElm.style.left = this.positionX + "vw";
+            this.domElm.style.bottom = this.positionY + "vh";
+        }, 1000);
+
+    }
 }

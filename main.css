@@ -46,6 +46,11 @@
  }
 
  .clickies {
-     background-color: rgb(240, 32, 32);
+     background-color: rgb(33, 92, 219);
      position: absolute;
+ }
+
+ .bomb {
+    background-color: rgb(255, 0, 0);
+    position: absolute;
  }
