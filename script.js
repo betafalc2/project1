@@ -20,7 +20,7 @@ start.addEventListener('click', () => {
             localStorage.setItem("counter", score);
             location.href = "./gameover.html";
         }
-    }, 500);
+    }, 300);
 
     setTimeout(() => {
         new Bomb();
@@ -33,8 +33,8 @@ start.addEventListener('click', () => {
 //click thingies//
 class Clickie {
     constructor() {
-        this.width = 10;
-        this.height = 15;
+        this.width = 25;
+        this.height = 30;
         this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
         this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
         this.createDomElm();
@@ -80,8 +80,8 @@ class Clickie {
 
 class Bomb {
     constructor() {
-        this.width = 10;
-        this.height = 15;
+        this.width = 25;
+        this.height = 30;
         this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
         this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
         this.createDomElm();

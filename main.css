@@ -6,16 +6,18 @@
  }
 
  body {
-     background-color: #E3C6F6;
-
+    background-image: url(/galaxie-galaxy.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
  }
 
  h1 {
      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-     color: black;
+     color: rgb(255, 255, 255);
      font-weight: bold;
      font-size: 5rem;
      text-align: center;
+     text-shadow: 3px 3px 3px red, 0 0 1em blue, 0 0 0.2em blue;
  }
 
  button {
@@ -27,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 3px 3px 3px red, 0 0 1em blue, 0 0 0.2em blue;
 
  }
 
@@ -34,8 +37,9 @@
      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
      color: black;
      font-weight: bold;
-     font-size: 2,5rem;
+     font-size: 3rem;
      text-align: center;
+     text-shadow: 3px 3px 3px red, 0 0 1em blue, 0 0 0.2em blue;
 
  }
 
@@ -53,3 +57,6 @@
     position: absolute;
  }
 
+ .foto-nanas {
+    position: absolute;
+ }
