@@ -6,7 +6,6 @@ m1 - create a counter
 create an object to click on
 
 m2 - count clicked things
-click and disappear
 
 m3 - thing appears, click and thing disappears
 score + if thing is clicked.
@@ -16,3 +15,6 @@ bonus - making it touch screen also
 
 https://github.com/betafalc2/project1.git
 
+problems - element is going under the line
+
+doesn't reappear after it disappears
