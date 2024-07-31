@@ -10,10 +10,10 @@ const nanas = document.getElementById("foto-nanas");
 
 class Nanas {
     constructor() {
-        this.width = 37;
-        this.height = 37;
+        this.width = 35;
+        this.height = 35;
         this.positionX = 18;
-        this.positionY = 35;
+        this.positionY = 29;
         this.createDomElm();
     }
     createDomElm() {
@@ -21,7 +21,7 @@ class Nanas {
         this.domElm.className = "bomb";
 
         const img = document.createElement("img");
-        img.src = 'nanas.png';
+        img.src = 'nanas2.png';
         img.style.width = '180%';
         img.style.height ='180%';
         img.style.objectFit = 'contain';
