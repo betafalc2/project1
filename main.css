@@ -6,7 +6,7 @@
  }
 
  body {
-    background-image: url(/galaxie-galaxy.gif);
+    background-image: url(galaxie-galaxy.gif);
     background-repeat: no-repeat;
     background-size: 100%;
     text-align: center;
@@ -19,7 +19,7 @@
      font-weight: bold;
      font-size: 5rem;
      text-align: center;
-     text-shadow: 7px 7px 7px rgb(197, 9, 9), 0 0 1em rgb(16, 59, 177), 0 0 0.2em rgb(255, 255, 255);
+     text-shadow: 7px 7px 7px red, 0 0 1em rgb(74, 59, 206), 0 0 0.2em rgb(255, 255, 255);
  }
 
  button {
@@ -31,14 +31,14 @@
     border-radius: 4vw;
     font-size: 50px;
     height: 15vh;
-    background-color: #7621f5;
+    background-color: #9147ff;
     color: white;
     padding: 20px 30px;
     align-items: center;
     box-shadow: 3px 3px 3px red, 0 0 1em blue, 0 0 0.2em blue;
     text-shadow: 3px 3px 3px red, 0 0 1em blue, 0 0 0.2em blue;
     :hover {
-        background-color: #6600ff;
+        background-color: #772ce8;
     }
 
  }
@@ -70,4 +70,3 @@
  .foto-nanas {
     position: absolute;
  }
-3
