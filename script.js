@@ -11,14 +11,12 @@ setInterval(() => {
     countingTime.innerHTML = timeLeft--;
 
     if (timeLeft === 0) {
-        location.href = "gameover.html";
+        location.href = "./gameover.html";
     }
 }, 100);
 
 start.style.display = "none";
 });
-
-
 
 //click thingies//
 class Clickie {
@@ -28,17 +26,7 @@ class Clickie {
         this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
         this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
         this.createDomElm();
-
-        this.domElm.addEventListener('click', () => {
-            score++;
-            counter.innerHTML = score;
-
-            this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
-            this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
-
-            this.domElm.style.left = this.positionX + "vw";
-            this.domElm.style.bottom = this.positionY + "vh";
-        });
+        this.clickClikie();
     }
 
     createDomElm() {
@@ -51,6 +39,19 @@ class Clickie {
         this.domElm.style.bottom = this.positionY + "vh";
         
         board.appendChild(this.domElm);
+    }
+
+    clickClikie(){
+        this.domElm.addEventListener('click', () => {
+            score++;
+            counter.innerHTML = score;
+
+            this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
+            this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
+
+            this.domElm.style.left = this.positionX + "vw";
+            this.domElm.style.bottom = this.positionY + "vh";
+        });
     }
     
 }
