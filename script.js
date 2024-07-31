@@ -1,22 +1,29 @@
-const counter = document.getElementById("counter");
+
+const counter = document.getElementsByClassName("counter");
+const countersArr = [...counter];
 const board = document.getElementById("board");
 const countingTime = document.getElementById("timer");
 const start = document.getElementById("start");
 
+
 let score = 0;
-let timeLeft = 120;
+let timeLeft = 60;
 
-start.addEventListener('click', ()=>{
-setInterval(() => {
-    countingTime.innerHTML = timeLeft--;
+//timer//
+start.addEventListener('click', () => {
+    new Clickie();
+    setInterval(() => {
+        countingTime.innerHTML = timeLeft--;
 
-    if (timeLeft === 0) {
-        location.href = "./gameover.html";
-    }
-}, 100);
+        if (timeLeft === 0) {
+            localStorage.setItem("counter", score);
+            location.href = "./gameover.html";
+        }
+    }, 100);
 
-start.style.display = "none";
+    start.style.display = "none";
 });
+
 
 //click thingies//
 class Clickie {
@@ -37,23 +44,24 @@ class Clickie {
         this.domElm.style.height = this.height + "vh";
         this.domElm.style.left = this.positionX + "vw";
         this.domElm.style.bottom = this.positionY + "vh";
-        
+
         board.appendChild(this.domElm);
     }
 
-    clickClikie(){
+    clickClikie() { //update score and move to random position//
         this.domElm.addEventListener('click', () => {
             score++;
-            counter.innerHTML = score;
+            countersArr.forEach(element => {
+                element.innerHTML = score;
+            });
 
             this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
             this.positionY = Math.floor(Math.random() * (100 - this.height + 1));
 
             this.domElm.style.left = this.positionX + "vw";
             this.domElm.style.bottom = this.positionY + "vh";
-        });
-    }
-    
-}
+        })
 
-const clickie = new Clickie();
+    }
+
+}
