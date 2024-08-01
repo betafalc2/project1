@@ -46,7 +46,7 @@ class Clickie {
         this.domElm.className = "clickies";
 
         const img = document.createElement("img");
-        img.src = 'minina1.png';
+        img.src = 'minina-santa.png';
         img.style.width = '100%';
         img.style.height ='100%';
         img.style.objectFit= 'contain';
@@ -94,7 +94,7 @@ class Bomb {
         this.domElm.className = "bomb";
 
         const img = document.createElement("img");
-        img.src = 'cookie1.png';
+        img.src = 'cookie-diabo.png';
         img.style.width = '100%';
         img.style.height ='100%';
         img.style.objectFit= 'contain';

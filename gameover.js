@@ -21,7 +21,7 @@ class Nanas {
         this.domElm.className = "bomb";
 
         const img = document.createElement("img");
-        img.src = 'nanas2.png';
+        img.src = 'nanas3-santo.png';
         img.style.width = '180%';
         img.style.height ='180%';
         img.style.objectFit = 'contain';
