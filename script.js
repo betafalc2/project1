@@ -5,7 +5,6 @@ const board = document.getElementById("board");
 const countingTime = document.getElementById("timer");
 const start = document.getElementById("start");
 
-
 let score = 0;
 let timeLeft = 60;
 
@@ -30,7 +29,6 @@ start.addEventListener('click', () => {
     start.style.display = "none";
 });
 
-
 //click thingies//
 class ClickieMinina {
     constructor() {
@@ -49,8 +47,8 @@ class ClickieMinina {
         const img = document.createElement("img");
         img.src = 'minina-santa.png';
         img.style.width = '100%';
-        img.style.height ='100%';
-        img.style.objectFit= 'contain';
+        img.style.height = '100%';
+        img.style.objectFit = 'contain';
 
         this.domElm.style.width = this.width + "vw";
         this.domElm.style.height = this.height + "vh";
@@ -96,8 +94,8 @@ class ClickieNanas {
         const img = document.createElement("img");
         img.src = 'nanas3-santo.png';
         img.style.width = '100%';
-        img.style.height ='100%';
-        img.style.objectFit= 'contain';
+        img.style.height = '100%';
+        img.style.objectFit = 'contain';
 
         this.domElm.style.width = this.width + "vw";
         this.domElm.style.height = this.height + "vh";
@@ -144,8 +142,8 @@ class Bomb {
         const img = document.createElement("img");
         img.src = 'cookie-diabo.png';
         img.style.width = '100%';
-        img.style.height ='100%';
-        img.style.objectFit= 'contain';
+        img.style.height = '100%';
+        img.style.objectFit = 'contain';
 
         this.domElm.style.width = this.width + "vw";
         this.domElm.style.height = this.height + "vh";

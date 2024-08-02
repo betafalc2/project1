@@ -2,7 +2,7 @@
 const finalScore = localStorage.getItem("counter");
 const displayScore = document.querySelector(".counter");
 const boardGameOver = document.getElementById("board");
-    
+
 displayScore.innerHTML = finalScore;
 
 
@@ -23,7 +23,7 @@ class Nanas {
         const img = document.createElement("img");
         img.src = 'gatos.gif';
         img.style.width = '180%';
-        img.style.height ='180%';
+        img.style.height = '180%';
         img.style.objectFit = 'contain';
 
         this.domElm.style.width = this.width + "vw";
