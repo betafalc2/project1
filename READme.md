@@ -6,7 +6,7 @@ Ironhack Game Project 1 - Cat Click Counter
 
 A little *stupid* click game with cats in space
 
-![the cats] (gatos.gif)
+![the cats](gatos.gif)
 
 ## How to play
 
